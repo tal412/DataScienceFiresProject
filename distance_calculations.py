@@ -1,6 +1,6 @@
 
-def calculate_distances_chunk(points_chunk, polygons_gdf, return_attribute=None):
-    polygons_sindex = polygons_gdf.sindex
+def calculate_distances_chunk(points_chunk, polygons_gdf,polygons_sindex, return_attribute=None,):
+
     results_list = []
     for point in points_chunk:
         result = polygons_sindex.nearest(point, return_distance=True, return_all=False)
